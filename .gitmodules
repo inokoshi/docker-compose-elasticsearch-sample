@@ -1,0 +1,3 @@
+[submodule "kibana-testdata"]
+	path = kibana-testdata
+	url = https://github.com/harukasan/kibana-testdata

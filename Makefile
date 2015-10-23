@@ -1,4 +1,4 @@
-es_host=`boot2docker ip`
+es_host=`docker-machine ip default`
 bulk: kibana-testdata/events.json
 	curl -s -XPOST $(es_host):9200/_bulk --data-binary @kibana-testdata/events.json > /dev/null; echo
 

@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java8
+FROM java:openjdk-8-jdk
 
 # Install ElasticSearch.
 RUN \
@@ -9,7 +9,7 @@ RUN \
   mv /tmp/elasticsearch-1.4.0 /elasticsearch
 
 RUN \
-  /elasticsearch/bin/plugin -install mobz/elasticsearch-head
+  /elasticsearch/bin/plugin -install mobz/elasticsearch-head --timeout 0
 
 # Define mountable directories.
 VOLUME ["/data"]

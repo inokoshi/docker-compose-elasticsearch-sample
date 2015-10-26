@@ -7,9 +7,9 @@
     $ make kibana-testdata
 
 
-## Launch with fig
+## Launch with docker-compose
 
-    $ fig up
+    $ docker-compose up
 
 
 ## Kibana config
